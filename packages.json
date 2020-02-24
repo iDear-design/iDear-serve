@@ -1,0 +1,34 @@
+{
+  "name": "timi-tools",
+  "version": "1.0.0",
+  "description": "tools for timi.design",
+  "private": false,
+  "author": "maxiaoqu",
+  "publisher": "maxiaoqu@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "bin": {
+    "timi": "./bin/timi-tools.js run packagePublish --pizza=pizza --debug=debug",
+    "timi-run": "./bin/timi-tools-run.js"
+  },
+  "keywords": [
+    "tools",
+    "timi-design",
+    "timi-tools"
+  ],
+  "dependencies": {
+    "colorful": "^2.1.0",
+    "commander": "^6.2.0",
+    "gulp": "^4.0.2",
+    "minimist": "^1.2.5",
+    "process.args": "^0.1.0"
+  },
+  "devDependencies": {},
+  "pre-commit": [
+    "lint",
+    "prettier"
+  ]
+}
