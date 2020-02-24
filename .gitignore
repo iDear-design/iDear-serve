@@ -21,8 +21,15 @@ Thumbs.db
 .build
 node_modules
 .cache
-dist
+dist/
 tests/*.css
 yarn.lock
 package-lock.json
 .vscode
+.idea
+node_modules/
+.settings
+npm-debug.log
+examples/dist/
+yarn-error.log
+test/unit/coverage

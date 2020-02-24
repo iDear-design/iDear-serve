@@ -1,1 +1,7 @@
-__tests__/
+.*
+*.md
+*.yml
+build/
+node_modules/
+test/
+package-lock.json

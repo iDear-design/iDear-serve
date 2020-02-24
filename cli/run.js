@@ -14,9 +14,10 @@ program.on('--help', () => {
 program.parse(process.argv);
 
 function runTask(toRun) {
-  const metadata = { task: toRun };
+  const metadata = {task: toRun};
   // Gulp >= 4.0.0 (doesn't support events)
   const taskInstance = gulp.task(toRun);
+  console.log(888, taskInstance)
   if (taskInstance === undefined) {
     gulp.emit('task_not_found', metadata);
     return;
@@ -40,9 +41,10 @@ const task = program.args[0];
 if (!task) {
   program.help();
 } else {
-  console.log('antd-tools run', task);
-
-  require('../gulpfile');
-
+  console.log('timi-tools run', task);
+  require('../gulp/file');
   runTask(task);
 }
+
+
+console.log(999,888)
