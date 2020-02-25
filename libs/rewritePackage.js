@@ -6,7 +6,7 @@ const pathJoin = path.join
 module.exports = (api, options) => {
   api.registerCommand('serve', {
     description: 'start development server',
-    usage: 'timi-tools serve [options] [entry]',
+    usage: 'timi-serve serve [options] [entry]',
     options: {
       '--outdir': `specify output directory (default: dist)`
     }
