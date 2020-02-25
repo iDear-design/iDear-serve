@@ -49,7 +49,7 @@ module.exports = class Service {
     })
 
     const builtInPlugins = [
-      './commands/serve'
+      '../libs/rewritePackage'
     ].map(idToPlugin)
 
     let plugins = builtInPlugins

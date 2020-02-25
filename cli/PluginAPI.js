@@ -1,6 +1,3 @@
-const path = require('path')
-const hash = require('hash-sum')
-
 // Note: if a plugin-registered command needs to run in a specific default mode,
 // the plugin needs to expose it via `module.exports.defaultModes` in the form
 // of { [commandName]: mode }. This is because the command mode needs to be
@@ -30,7 +27,6 @@ class PluginAPI {
    *   (args: { [string]: string }, rawArgs: string[]) => ?Promise
    */
   registerCommand(name, opts, fn) {
-    console.log(9911001100, 123456789, fn)
     if (typeof opts === 'function') {
       fn = opts
       opts = null

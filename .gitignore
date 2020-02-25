@@ -21,7 +21,7 @@ Thumbs.db
 .build
 node_modules
 .cache
-dist/
+dist/*
 tests/*.css
 yarn.lock
 package-lock.json
