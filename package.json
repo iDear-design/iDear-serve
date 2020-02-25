@@ -11,11 +11,10 @@
     "url": ""
   },
   "bin": {
-    "timi-tools": "./bin/timi-tools.js",
-    "timi-tools-run": "./bin/timi-tools-run.js"
+    "timi-tools": "./bin/timi-tools.js"
   },
   "scripts": {
-    "timi": "./bin/timi-tools.js run packagePublish --pizza=pizza --debug=debug"
+    "timi": "./bin/timi-tools.js serve --outdir=dist"
   },
   "keywords": [
     "tools",
@@ -26,6 +25,7 @@
     "colorful": "^2.1.0",
     "commander": "^6.2.0",
     "gulp": "^4.0.2",
+    "hash-sum": "^2.0.0",
     "minimist": "^1.2.5",
     "process.args": "^0.1.0"
   },
