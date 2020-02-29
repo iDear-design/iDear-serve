@@ -16,7 +16,7 @@ module.exports = (api, options) => {
     if (!hasOutdir) {
       mkdirFolder(outdirDir)
     }
-    const packagDir = pathJoin('packages.json')
+    const packagDir = pathJoin('package.json')
     const hasPackage = pathsIsExist(packagDir)
     if (!hasPackage) {
       process.exit(1)
@@ -28,7 +28,7 @@ module.exports = (api, options) => {
       if (packagData.devDependencies) {
         delete packagData.devDependencies
       }
-      writeFile(pathJoin(`./${outdir}/packages.json`), packagData)
+      writeFile(pathJoin(`./${outdir}/package.json`), packagData)
     }
   })
 }
