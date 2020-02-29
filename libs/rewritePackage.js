@@ -1,28 +1,34 @@
 'use strict'
-const path = require('path')
-const writeFile = require('fs').writeFileSync
-const pathJoin = path.join
+const {pathJoin} = require('../utils/pathAddress')
+const {pathsIsExist, writeFile, mkdirFolder} = require('../utils/fileSystem')
 
 module.exports = (api, options) => {
   api.registerCommand('rewritePackage', {
-    description: 'start development server',
+    description: 'rewrite this project package',
     usage: 'timi-serve serve [options] [entry]',
     options: {
       '--outdir': `specify output directory (default: dist)`
     }
   }, async function rewritePackage(args) {
-    const projectDir = pathJoin(__dirname, '../')
-    const cfg = require(path.join(projectDir, 'packages.json'))
-    if (!cfg) {
+    const outdir = args.outdir || 'dist'
+    const outdirDir = pathJoin(outdir)
+    const hasOutdir = pathsIsExist(outdirDir)
+    if (!hasOutdir) {
+      mkdirFolder(outdirDir)
+    }
+    const packagDir = pathJoin('packages.json')
+    const hasPackage = pathsIsExist(packagDir)
+    if (!hasPackage) {
       process.exit(1)
     } else {
-      if (cfg.scripts) {
-        delete cfg.scripts
+      const packagData = require(packagDir)
+      if (packagData.scripts) {
+        delete packagData.scripts
       }
-      if (cfg.devDependencies) {
-        delete cfg.devDependencies
+      if (packagData.devDependencies) {
+        delete packagData.devDependencies
       }
-      writeFile(pathJoin(projectDir, `./${args.outdir}/packages.json`), JSON.stringify(cfg, null, 2))
+      writeFile(pathJoin(`./${outdir}/packages.json`), packagData)
     }
   })
 }

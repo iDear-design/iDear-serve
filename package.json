@@ -1,7 +1,7 @@
 {
   "name": "timi-serve",
   "version": "1.0.0",
-  "description": "tools for timi.design",
+  "description": "timi-serve for timi.design",
   "private": false,
   "author": "maxiaoqu",
   "publisher": "maxiaoqu@gmail.com",
@@ -11,10 +11,7 @@
     "url": ""
   },
   "bin": {
-    "timi-serve": "bin/timi-serve.js"
-  },
-  "scripts": {
-    "timi": "bin/timi-serve.js rewritePackage --outdir=dist"
+    "timi-serve": "./bin/timi-serve.js"
   },
   "keywords": [
     "tools",
@@ -22,7 +19,6 @@
     "timi-serve"
   ],
   "dependencies": {
-    "hash-sum": "^2.0.0",
     "minimist": "^1.2.5"
   },
   "devDependencies": {},
