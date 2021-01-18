@@ -1,7 +1,7 @@
 {
-  "name": "timi-serve",
+  "name": "idear-serve",
   "version": "1.0.0",
-  "description": "timi-serve for timi.design",
+  "description": "idear-serve for idear.design",
   "private": false,
   "author": "maxiaoqu",
   "publisher": "maxiaoqu@gmail.com",
@@ -11,12 +11,12 @@
     "url": ""
   },
   "bin": {
-    "timi-serve": "./bin/timi-serve.js"
+    "idear-serve": "./bin/idear-serve.js"
   },
   "keywords": [
     "tools",
-    "timi-design",
-    "timi-serve"
+    "idear-design",
+    "idear-serve"
   ],
   "dependencies": {
     "minimist": "^1.2.5"
