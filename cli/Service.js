@@ -2,7 +2,7 @@ const PluginAPI = require('./PluginAPI')
 
 module.exports = class Service {
   constructor(context) {
-    process.TIMI_TOOLS = this
+    process.IDEAR_TOOLS = this
     this.initialized = false
     this.context = context
     this.commands = {}
