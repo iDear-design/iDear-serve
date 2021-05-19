@@ -5,7 +5,7 @@ const {pathsIsExist, writeFile, mkdirFolder} = require('../utils/fileSystem')
 module.exports = (api, options) => {
   api.registerCommand('rewritePackage', {
     description: 'rewrite this project package',
-    usage: 'idear-serve serve [options] [entry]',
+    usage: 'idear-packge serve [options] [entry]',
     options: {
       '--outdir': `specify output directory (default: dist)`
     }

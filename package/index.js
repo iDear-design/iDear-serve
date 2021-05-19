@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const Service = require('../cli/Service')
+const Service = require('./cli/Service')
 const service = new Service(process.cwd())
 
 const rawArgv = process.argv.slice(2)

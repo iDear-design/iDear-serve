@@ -11,12 +11,13 @@
     "url": ""
   },
   "bin": {
-    "idear-serve": "./bin/idear-serve.js"
+    "idear-package": "package/index.js"
   },
   "keywords": [
     "tools",
     "idear-design",
-    "idear-serve"
+    "idear-serve",
+    "idear-package"
   ],
   "dependencies": {
     "minimist": "^1.2.5"
