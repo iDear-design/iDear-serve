@@ -3,13 +3,13 @@ const {pathJoin} = require('../utils/pathAddress')
 const {pathsIsExist, writeFile, mkdirFolder} = require('../utils/fileSystem')
 
 module.exports = (api, options) => {
-  api.registerCommand('rewritePackage', {
+  api.registerCommand('rewrite', {
     description: 'rewrite this project package',
     usage: 'idear-packge serve [options] [entry]',
     options: {
       '--outdir': `specify output directory (default: dist)`
     }
-  }, async function rewritePackage(args) {
+  }, async function rewrite(args) {
     const outdir = args.outdir || 'dist'
     const outdirDir = pathJoin(outdir)
     const hasOutdir = pathsIsExist(outdirDir)
@@ -34,5 +34,5 @@ module.exports = (api, options) => {
 }
 
 module.exports.defaultModes = {
-  rewritePackage: 'rewritePackage'
+  rewrite: 'rewrite'
 }
